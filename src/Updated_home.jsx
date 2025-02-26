@@ -171,7 +171,7 @@ const Updated_home = () => {
         );
         setShow_alert(true);
         setGo_to_attemp_page(() => () => {
-            window.open(`/attempt_quiz/${quiz.id}`, "_blank");
+            window.open(`${window.location.origin}/Quiz-Website/#/attempt_quiz/${quiz.id}`, "_blank");
         });
     }
 
