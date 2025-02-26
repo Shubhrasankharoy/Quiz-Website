@@ -3,11 +3,7 @@
 A **Quiz Website** built with **Vite + React** and authenticated using **Firebase**. Users can create quizzes, attempt quizzes, and save progress securely.
 
 ## 🚀 Live Demo
-<<<<<<< HEAD
-🔗 [Quiz Website Live Link](https://shubhrasankharoy.github.io/Quiz-Website/) *(Replace with your actual GitHub Pages URL)*
-=======
 🔗 [Quiz Website Live Link](https://shubhrasankharoy.github.io/Quiz-Website/)
->>>>>>> 4873e8c (Update Readme file)
 
 ## 📌 Features
 - ✅ User authentication (Google Sign-In via Firebase)
