@@ -1,8 +1,61 @@
-# React + Vite
+# Quiz Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Quiz Website** built with **Vite + React** and authenticated using **Firebase**. Users can create quizzes, attempt quizzes, and save progress securely.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+🔗 [Quiz Website Live Link](https://your-username.github.io/your-repo-name/) *(Replace with your actual GitHub Pages URL)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
+- ✅ User authentication (Google Sign-In via Firebase)
+- ✅ Create quizzes with custom questions
+- ✅ Attempt quizzes and view scores
+- ✅ Secure storage using Firebase Firestore
+
+## 🛠️ Tech Stack
+- **Frontend**: React, Vite, CSS
+- **Backend**: Firebase Firestore
+- **Authentication**: Firebase Auth
+
+## 📦 Installation
+1. **Clone the repository**
+   ```sh
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
+3. **Create a `.env` file and add Firebase credentials** (to keep `firebaseConfig.js` secret)
+   ```env
+   VITE_FIREBASE_API_KEY=your-api-key
+   VITE_FIREBASE_AUTH_DOMAIN=your-auth-domain
+   VITE_FIREBASE_PROJECT_ID=your-project-id
+   VITE_FIREBASE_STORAGE_BUCKET=your-storage-bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+   VITE_FIREBASE_APP_ID=your-app-id
+   ```
+4. **Run the development server**
+   ```sh
+   npm run dev
+   ```
+
+## 🚀 Deployment (GitHub Pages)
+1. **Build the project**
+   ```sh
+   npm run build
+   ```
+2. **Deploy to GitHub Pages**
+   ```sh
+   npm run deploy
+   ```
+
+## 🤝 Contributing
+Feel free to **fork** this repository and contribute! If you find issues, submit a pull request or open an issue.
+
+## 📜 License
+This project is licensed under the **MIT License**.
+
+---
+Made with ❤️ by [Shubhra Sankha Roy](https://github.com/Shubhrasankharoy)
+
