@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Jersey+20&family=Jockey+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.p-relative{
+    position: relative;
+}
+
+.p-absolute{
+    position: absolute;
+}
+
+.login-body{
+    font-family: "Poppins", serif;
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.login-body .container{
+    width: 500px;
+    height: auto;
+    background-color: rgba(175, 175, 175, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 20px 0;
+    box-shadow: 0px 0px 20px 0px #4c4c4c;
+}
+
+@media (max-width: 495px) {
+    .login-body .container{
+        width: 365px;
+    }
+}
+
+@media (max-width: 361px) {
+    .login-body .container{
+        width: 272px;
+    }
+}
+
+.container>h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 495px) {
+    .container>h1{
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 361px) {
+    .container>h1{
+        font-size: 21px;
+        margin-bottom: 0;
+    }
+}
+
+.login-body .container form{
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+}
+
+@media (max-width: 361px) {
+    .login-body .container form{
+        width: 88%;
+    }
+}
+
+form>div{
+    margin: 10px;
+}
+
+form>div>div{
+    padding: 0 7px;
+}
+
+@media (max-width: 361px) {
+    form>div>div{
+        font-size: 15px;
+    }
+}
+
+form>div>input{
+    width: 95%;
+    height: 30px;
+    padding: 5px 0px;
+    padding-left: 20px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+
+@media (max-width: 361px) {
+    form>div>input{
+        width: 92%;
+        height: 25px;
+    }
+}
+
+.brands-icons{
+    font-size: 20px;
+    margin: 13px;
+    cursor: pointer;
+    width: 95%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #53e5ff;
+    padding: 8px 0;
+    border-radius: 30px;
+    color: #282727;
+    font-weight: 600;
+}
+
+@media (max-width: 361px) {
+    .brands-icons{
+        font-size: 15px;
+        width: 92%;
+        height: 23px;
+        gap: 10px;
+    }
+}
+
+.brands-icons:hover{
+    background-color:#47c8df ;
+}
+
+.eye-icon{
+    right: 3%;
+    top: 55%;
+    color: black;
+    cursor: pointer;
+}
+
+#sign_up{
+    width: 100%;
+    padding: 13px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 22px;
+    background-color: #00a1ff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 361px) {
+    #sign_up{
+        padding: 10px;
+    }
+}
+
+#sign_up:hover{
+    background-color: #0090e4;
+}
+
+form>p{
+    font-size: 13px;
+    text-align: center;
+}
+
+.or{
+    text-align: center;
+}
