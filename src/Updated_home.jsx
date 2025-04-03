@@ -26,7 +26,6 @@ const Updated_home = () => {
     const searchRef = useRef(null);
     const navigate = useNavigate();
 
-
     useEffect(() => {
         document.title = "Home - Explore Exciting Quizzes";
     }, []);
@@ -124,7 +123,8 @@ const Updated_home = () => {
         for (let index = 0; index < questions.length; index++) {
             const question = questions[index];
             if (question.answer == null) {
-                alert("Please select an answer for question " + (index + 1))
+                setAlert_message(`Please select an answer for question ${(index + 1)}`);
+                setShow_alert(true);
                 return;
             }
         }
@@ -293,6 +293,7 @@ const Updated_home = () => {
                         setShow_alert(false);
                     }}
                     onCancel={() => {
+                        setGo_to_attemp_page(false);
                         setShow_alert(false);
                     }}
                 />)}

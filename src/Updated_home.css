@@ -421,8 +421,9 @@
 .create-quiz-container .quiz-name {
     width: 60%;
     height: 20px;
-    background-color: rgb(238, 238, 238);
-    border-radius: 30px;
+    box-shadow: 1px 1px 10px 0px inset #c2c2c2;
+    background-color: rgb(255 255 255);
+    border-radius: 4px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -443,6 +444,8 @@
     }    
     .create-quiz-container .quiz-name input{
         font-size: 21px;
+        padding: 0;
+        width: 100%;
     }
 }
 
@@ -452,7 +455,7 @@
     }    
     .create-quiz-container .quiz-name input{
         font-size: 17px;
-        padding: 10px 6px;
+        padding: 0;
     }
 }
 
@@ -567,6 +570,25 @@
 
 .create-quiz-container .btns>.submit-btn:hover {
     background-color: #0024ee;
+}
+
+@media (max-width: 375px){
+    .create-quiz-container{
+        padding: 20px 2px;
+        width: 90%;
+    }
+    .create-quiz-container .questions .question>input {
+        font-size: 14px;
+    }
+
+    .create-quiz-container .questions .question .option>input[type="text"] {
+        width: 60%;
+    }
+
+    .create-quiz-container .btns>button{
+        padding: 7px;
+        margin: 0 5px;
+    }
 }
 
 .create-quiz-body .cross-btn {
