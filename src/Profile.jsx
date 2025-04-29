@@ -58,8 +58,8 @@ const Profile = () => {
             const userData = userDocSnap.data();
             setUsername(userData.username || "Guest");
             setAvatarIndex(userData.avatar_index || 0);
-            setQuizIds(userData.quizzes)
-            setAttemptIds(userData.attempts)
+            setQuizIds(userData.quizzes || [])
+            setAttemptIds(userData.attempts || [])
           } else {
             console.log("No username found in Firestore");
           }
@@ -115,29 +115,34 @@ const Profile = () => {
     }
   }
 
-  async function fetchAttemptData(attempt, quizId, userId) {
+  async function fetchAttemptData(attempt, quizId) {
+    
     try {
       const quizRef = doc(db, "quizzes", quizId);
       const quizDataSnap = await getDoc(quizRef);
+  
       if (quizDataSnap.exists()) {
         const quizData = quizDataSnap.data();
+  
         setQuizName((prev) => ({
           ...prev,
           [attempt]: quizData.quiz_name
-        }))
-      }
-
-      const userRef = doc(db, "users", userId);
-      const userDataSnap = await getDoc(userRef);
-      if (userDataSnap.exists()) {
-        const userData = userDataSnap.data();
-        setCreaterName((prev) => ({
-          ...prev,
-          [attempt]: userData.username
-        }))
+        }));
+        
+        const userRef = doc(db, "users", quizDataSnap.data().user_id);
+        const userDataSnap = await getDoc(userRef);
+        
+        if (userDataSnap.exists()) {
+          const userData = userDataSnap.data();
+          
+          setCreaterName((prev) => ({
+            ...prev,
+            [attempt]: userData.username
+          }));
+        }
       }
     } catch (error) {
-      console.log("Cannot get the name of the quiz:" + error);
+      console.log("Cannot get the name of the quiz: " + error);
     }
   }
 
@@ -185,9 +190,9 @@ const Profile = () => {
           if (attemptDocSnap.exists()) {
             const attemptData = attemptDocSnap.data();
             fetchedAttempts.push({ id: attempt, ...attemptData });
-            fetchAttemptData(attempt, attemptData.quiz_id, attemptData.user_id);
+            fetchAttemptData(attempt, attemptData.quiz_id);
           }
-
+          
         }
         setAttempts(fetchedAttempts);
       } catch (error) {
@@ -214,7 +219,8 @@ const Profile = () => {
     }
   }, [])
 
-  const handle_logout = async () => {
+  const handle_logout = async () => {0
+    
     await auth.signOut();
     navigate("/");
   }
